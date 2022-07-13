@@ -19,3 +19,7 @@
     color: $color;
   }
 }
+
+@function calcUnit($i,$base:1,$unit:px) {
+  @return calc($i/$base) + $unit;
+}
