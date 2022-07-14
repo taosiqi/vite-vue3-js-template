@@ -20,7 +20,7 @@ function formatTime (date) {
 /**
  * 格式化时间-年月日
  * @param date 时间字符串
- * @return 格式化后的年月日
+ * @return string
  */
 function year (date) {
   const year = date.getFullYear()
@@ -32,7 +32,7 @@ function year (date) {
 /**
  * 格式化时间-时分
  * @param date 时间字符串
- * @return  格式化后的时间
+ * @return  string
  */
 function hour (date) {
   const hour = date.getHours()
@@ -61,7 +61,7 @@ function Trim (str, isGlobal = 'g') {
 
 /**
  * 在js中if条件为null/undefined/0/NaN/""表达式时，统统被解释为false,此外均为true .
- * @param arg1 参数
+ * @param arg
  */
 function isNull (arg) {
   return !!(!arg && arg !== 0 && typeof arg !== 'boolean')
@@ -69,7 +69,7 @@ function isNull (arg) {
 
 /**
  * 生成guid
- * @return guid
+ * @return string
  */
 function guid () {
   function S4 () {
@@ -81,7 +81,7 @@ function guid () {
 /**
  * 获取localStorage
  * @param key localStorage的key
- * @return  格式化之后的localStorage
+ * @return  string
  */
 function getItem (key) {
   const local = localStorage.getItem(key)
@@ -161,6 +161,47 @@ function formatUrlData (value) {
   return attr
 }
 
+/**
+ * 空位合并运算符
+ * @param value
+ * @returns {string|*}
+ */
+
+function voidMerge (value) {
+  if (value === 0 || value === false) {
+    return value
+  }
+  return value || '-'
+}
+
+/**
+ * 格式化金额
+ * @param number
+ * @returns {string}
+ */
+
+function formatMoney (number) {
+  // 转为字符串，并按照.拆分
+  const arr = (number + '').split('.')
+  // 整数部分再拆分
+  const int = arr[0].split('')
+  // 小数部分
+  const fraction = arr[1] || ''
+  // 返回的变量
+  let r = ''
+  int.reverse().forEach(function (v, i) {
+    // 非第一位并且是位值是3的倍数，添加“,”
+    if (i !== 0 && i % 3 === 0) {
+      r = v + ',' + r
+    } else {
+      // 正常添加字符(这是好写法)
+      r = v + r
+    }
+  })
+  // 整数部分和小数部分拼接
+  return r + (fraction ? '.' + fraction : '')
+}
+
 export {
   formatTime,
   hour,
@@ -173,5 +214,7 @@ export {
   removeItem,
   urlDecode,
   urlEncode,
-  formatUrlData
+  formatUrlData,
+  voidMerge,
+  formatMoney
 }

@@ -1,9 +1,9 @@
 
 import { createRouter, createWebHashHistory } from 'vue-router'
-
 const routes = [
   {
     path: '/',
+    component: () => import(/* webpackChunkName: "home" */ '@/layouts/index.vue'),
     redirect: '/home',
     children: [
       { path: 'home', name: 'home', meta: { title: '生产预测报告' }, component: () => import(/* webpackChunkName: "home" */ '@/views/index.vue') }

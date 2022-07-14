@@ -1,9 +1,13 @@
 <template>
-  <div class="app-router">
+  <div class="more">
     <router-view />
   </div>
 </template>
 
-<style>
+<script setup>
+
+</script>
+
+<style scoped>
 
 </style>
