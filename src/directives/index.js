@@ -4,7 +4,7 @@ import waves from '@/directives/waves/'
 const directive = [elDrag, waves]
 
 export default (app) => {
-  directive.forEach((directive) => {
-    app.directive(directive.name, directive)
-  })
+    directive.forEach((directive) => {
+        app.directive(directive.name, directive)
+    })
 }
