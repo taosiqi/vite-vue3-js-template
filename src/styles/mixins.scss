@@ -20,6 +20,6 @@
   }
 }
 
-@function calcUnit($i,$base:1,$unit:px) {
-  @return calc($i/$base) + $unit;
+@function calcUnit($i, $base: 1, $unit: px) {
+  @return ($i/$base) + $unit;
 }

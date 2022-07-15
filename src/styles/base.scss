@@ -1,5 +1,5 @@
-@import "mixins";
-@import "variable";
+@import 'mixins';
+@import 'variable';
 
 //@for $i from 12 to 23 {
 //  .fz-#{$i} {
@@ -40,7 +40,6 @@
 //    padding-bottom: calcUnit($i);
 //  }
 //}
-
 
 //felx布局
 .ui-flex {

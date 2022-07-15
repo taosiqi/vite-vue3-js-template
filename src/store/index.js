@@ -3,9 +3,9 @@
 // 英文文档https://pinia.web3doc.top/
 
 // import { createPinia } from 'pinia'
-import pinaPluginPersist from 'pinia-plugin-persist' // 持久化store
+import pinaPluginPersist from 'pinia-plugin-persist'; // 持久化store
 
-const store = createPinia()
-store.use(pinaPluginPersist)
+const store = createPinia();
+store.use(pinaPluginPersist);
 
-export default store
+export default store;
