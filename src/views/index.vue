@@ -12,7 +12,8 @@
 </template>
 
 <script setup>
-// import { getList } from '@/api/test'
+import { getList } from '@/api/test'
+
 const tableData = [
     {
         date: '2016-05-03',
@@ -35,7 +36,11 @@ const tableData = [
         address: 'No. 189, Grove St, Los Angeles',
     },
 ]
-// getList()
+const data = reactive({
+    a: 1,
+})
+console.log(data)
+getList()
 </script>
 
 <style lang="scss" scoped>

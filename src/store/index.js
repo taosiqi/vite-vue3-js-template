@@ -2,7 +2,7 @@
 // 中文文档 https://pinia.web3doc.top/
 // 英文文档https://pinia.web3doc.top/
 
-import { createPinia } from 'pinia'
+// import { createPinia } from 'pinia'
 import pinaPluginPersist from 'pinia-plugin-persist' // 持久化store
 
 const store = createPinia()

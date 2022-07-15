@@ -7,9 +7,9 @@ module.exports = {
     extends: [
         'plugin:vue/vue3-essential',
         'standard',
-        './.eslintrc-auto-import.json',
         'prettier',
         'plugin:prettier/recommended',
+        './.eslintrc-auto-import.json',
     ],
     parserOptions: {
         ecmaVersion: 'latest',

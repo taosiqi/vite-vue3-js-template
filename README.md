@@ -1,7 +1,5 @@
-# Vue 3 + Vite
+# 必看
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## 使用unplugin-auto-import后，有两点问题需要解决
+- 1、eslit报错，生成.eslintrc-auto-import.json解决
+- 2、因为未在script显性引入导致的类型推断失败和异常提示（未解析的函数或方法 reactive()）， 使用auto-import.d.ts文件解决，viteconfig的AutoImport解开注释，执行run dev会自动生成。

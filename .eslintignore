@@ -14,3 +14,4 @@ yarn-error.log*
 *.sln
 *.sw*
 jsconfig.js
+auto-import.d.ts
