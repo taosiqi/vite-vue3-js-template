@@ -1,5 +1,5 @@
 // 需要套一层div 不然会报错
-// <div v-el-drag>
+// <div v-elDrag>
 //   <el-dialog title="提示" v-model="dialogVisible" width="30%">
 //   <span>这是一段信息</span>
 //   <template #footer>
